@@ -20,7 +20,8 @@ username_input = driver.find_element_by_xpath('//input[@name="session[username_o
 username_input.send_keys(username)
 password_input = driver.find_element_by_xpath('//input[@name="session[password]"]')
 password_input.send_keys(password)
-password_input.send_keys(Keys.RETURN)
+login_button = driver.find_element_by_xpath('//div[@data-testid="LoginForm_Login_Button"]')
+login_button.click()
 
 # Wait for the home page to load
 time.sleep(2)
